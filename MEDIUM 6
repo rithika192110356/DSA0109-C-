@@ -1,0 +1,33 @@
+#include <iostream>
+
+int findSmallestMissing(int arr[], int size) {
+    int i = 0;
+
+    while (i < size) {
+        if (arr[i] != i) {
+            return i;
+        }
+        i++;
+    }
+
+    return i;
+}
+
+int main() {
+    int size;
+
+    std::cout << "Enter the size of the sorted array: ";
+    std::cin >> size;
+
+    int arr[size];
+
+    std::cout << "Enter the sorted array elements: ";
+    for (int i = 0; i < size; i++) {
+        std::cin >> arr[i];
+    }
+    int result = findSmallestMissing(arr, size);
+
+    std::cout << "The smallest missing element in the sorted array is: " << result << std::endl;
+
+    return 0;
+}
