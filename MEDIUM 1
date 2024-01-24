@@ -1,0 +1,31 @@
+#include <iostream>
+
+int main() {
+    int num, sum = 0;
+
+    // Input: Enter a number
+    std::cout << "Enter a positive integer: ";
+    std::cin >> num;
+
+    // Check if the number is positive
+    if (num <= 0) {
+        std::cout << "Please enter a positive integer." << std::endl;
+        return 1; // Exit with an error code
+    }
+
+    // Finding the sum of proper divisors using a for loop
+    for (int i = 1; i < num; i++) {
+        if (num % i == 0) {
+            sum += i;
+        }
+    }
+
+    // Check if the number is perfect
+    if (sum == num) {
+        std::cout << num << " is a perfect number." << std::endl;
+    } else {
+        std::cout << num << " is not a perfect number." << std::endl;
+    }
+
+    return 0;
+}
