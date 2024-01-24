@@ -1,0 +1,28 @@
+#include <iostream>
+
+int main() {
+    int num, sum = 0, divisor = 1;
+
+    std::cout << "Enter a positive integer: ";
+    std::cin >> num;
+
+    if (num <= 0) {
+        std::cout << "Please enter a positive integer." << std::endl;
+        return 1; 
+    }
+
+    while (divisor < num) {
+        if (num % divisor == 0) {
+            sum += divisor;
+        }
+        divisor++;
+    }
+
+    if (sum == num) {
+        std::cout << num << " is a perfect number." << std::endl;
+    } else {
+        std::cout << num << " is not a perfect number." << std::endl;
+    }
+
+    return 0;
+}
