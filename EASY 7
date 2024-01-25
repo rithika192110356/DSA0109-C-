@@ -1,0 +1,26 @@
+#include <iostream>  
+using namespace std;  
+int main ()  
+{  
+    string str1, str2; // declare string variable  
+      
+    cout << " Enter the username: ";  
+    cin >> str1;   
+      
+    cout << " Renter the username: ";  
+    cin >> str2;   
+      
+    // use compare() function to compare the second string with first string  
+      
+    int i = str1.compare(str2);  
+      
+    if ( i == 0)  
+    {  
+        cout <<"USERNAME IS VALID" << endl;  
+    }  
+    else  
+    {  
+        cout << " USERNAME IS INVALID.";  
+    }  
+return 0;  
+}
